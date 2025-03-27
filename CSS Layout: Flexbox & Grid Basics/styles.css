@@ -1,0 +1,225 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #0a2342;
+}
+
+.header {
+  background-color: rgb(63, 72, 240);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 45px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav a {
+  background-color: rgb(63, 72, 240);
+  color: white;
+  width: 100px; /* Ensure width is set */
+  height: 60px; /* Ensure height is set */
+  background: transparent; /* Default background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50px; /* Ensure border-radius is consistent */
+  overflow: hidden;
+  transition: all 0.3s ease-in-out; /* Smoother transition */
+}
+
+.nav a:hover {
+  color: rgb(190, 190, 190);
+  background: #0a2342;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 0;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Or any height */
+  color: white;
+}
+
+.accent {
+  color: rgb(63, 72, 240);
+}
+
+.text-highlight {
+  color: lightblue;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.feature-box {
+  flex: 1;
+  min-width: 250px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px; /* Added extra bottom margin */
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.feature-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.feature-description {
+  font-size: 16px;
+  color: #666;
+}
+
+.text-highlight {
+  color: rgb(63, 72, 240);
+  font-size: 60px;
+}
+
+.hero-text {
+  font-size: 60px;
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+
+.video-demo {
+  margin: auto;
+  display: block;
+  width: 100%; /* Make sure the video container takes up full width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 1000px; /* Limit the max width for larger screens */
+  max-height: 1000px; /* Limit the max height for larger screens */
+  aspect-ratio: 16 / 9; /* Set the aspect ratio to match most video formats */
+}
+
+.waitlist-container {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+/* Responsive Design with Media Queries */
+
+/* For small devices like mobile phones (up to 600px) */
+@media (max-width: 600px) {
+  .header {
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .features-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .feature-box {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .hero-text {
+    font-size: 40px;
+  }
+
+  .video-demo {
+    max-width: 90%; /* Ensure video is smaller on mobile */
+    max-height: 500px; /* Adjust max-height for mobile */
+  }
+}
+
+/* For medium devices (tablets, 601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hero-text {
+    font-size: 50px;
+  }
+
+  .feature-box {
+    width: 45%;
+  }
+
+  .features-container {
+    justify-content: space-around;
+  }
+
+  .video-demo {
+    max-width: 90%; /* Adjust video width for tablets */
+    max-height: 800px; /* Adjust max-height for tablets */
+  }
+}
+
+/* For large devices (desktop, 1025px and up) */
+@media (min-width: 1025px) {
+  .header {
+    padding: 0 45px;
+    flex-direction: row;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+
+  .features-container {
+    justify-content: space-between;
+  }
+
+  .feature-box {
+    width: 30%;
+  }
+
+  .hero-text {
+    font-size: 60px;
+  }
+  .video-demo {
+    max-width: 1000px; /* Full width for larger screens */
+    max-height: 1000px; /* Allow larger videos on desktops */
+  }
+}
