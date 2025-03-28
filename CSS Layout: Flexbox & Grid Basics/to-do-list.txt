@@ -1,0 +1,8 @@
+March 28 2025
+
+- [ ]  Make landing page finished version 1 with html css
+    - [ ]  add responsive design
+    - [ ]  add simple animations in css
+    - [ ]  create native form that stores in supabase, replace google form
+    - [ ]  deploy landing page on vercel
+- [ ]  IF TIME 🛑: Set up log in/sign up features
